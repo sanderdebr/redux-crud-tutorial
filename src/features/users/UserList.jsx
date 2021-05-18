@@ -6,8 +6,7 @@ import { Link } from "react-router-dom";
 export function UserList() {
   const dispatch = useDispatch();
 
-  const { entities } = useSelector((state) => state.users);
-  const loading = useSelector((state) => state.loading);
+  const { loading, entities } = useSelector((state) => state.users);
 
   const handleDelete = (id) => {
     dispatch(userDeleted({ id }));
